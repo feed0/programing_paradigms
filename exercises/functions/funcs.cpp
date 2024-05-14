@@ -57,14 +57,33 @@ int gcd(int a, int b) {
 }
 
 
-int main() {
-    assert(gcd(10, 5) == 5);
-    assert(gcd(14, 28) == 14);
-    assert(gcd(18, 35) == 1);
-    assert(gcd(60, 48) == 12);
-    assert(gcd(101, 103) == 1);
+bool isPrime(int n){
+    if(n <=1) return false;
+    for(int i = 2; i*i <= n;++i){
+        if(n%i==0) return false;
+    } return true;
+}
+// - Retorne os x números primos: NumerosPrimos(int x)
+int* firstPrimes(int n){
+    int count = 0;
+    int num = 2;
+    int* primes = new int[n];
+    while(count<n){
+        if(isPrime(num)){
+            primes[count] = num;
+            count++;
+        }
+        ++num;
+    }
+    return primes;
+}
 
-    cout<<"Todos os casos passaram"<<endl;
+
+    // 8 {2, 3 ,5, 7}
+
+
+int main() {
+    firstPrimes(4);
 
     return 0;
 }
