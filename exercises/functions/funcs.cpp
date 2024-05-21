@@ -1,16 +1,16 @@
-/* 
+/*
     FNCTION EXERCISES
 
-    BY: 
+    BY:
         Felipe Campelo,
         Taissa Aleves,
         Vinicius Lima.
 
     — 1 Given a vector of numbers, return the largest number: max(int[] v)
-    - 2 The factorial(int x) shall return the x! 
+    - 2 The factorial(int x) shall return the x!
     - 3 The gcd(int a, int b) shall return the greatest common divisor of two numbers
-    
-    — 4 Retorne os x números primos: NumerosPrimos(int x)
+    — 4 Return the x prime numbers: Prime Numbers(int x)
+
     - 5 Apresente os x números da sequência de Fibonacci: Fibonacci(int x)
     — 6 Converta um dado número binário para decimal: BinToDec(int x)
     - 7 Converta um dado número decimal para binário: DecToBin(int x)
@@ -19,71 +19,48 @@
 
 #include <assert.h>
 #include <iostream>
+
+// exercise files
+#include "max.cpp"
+#include "factorial.cpp"
+#include "gcd.cpp"
+#include "firstPrimes.cpp"
+
 using namespace std;
 
-// — Given a vector of numbers, return the largest number: max(int[] v)
-int max(int v[]) {
-    int max = v[0];
-    int size = sizeof(v) / sizeof(v[0]); // https://stackoverflow.com/questions/33523585/how-do-sizeofarr-sizeofarr0-work
-    for (int i = 1; i < size; i++) {
-        if (v[i] > max) {
-            max = v[i];
-        }
-    }
-    return max;
-}
+int main()
+{
 
-// - The factorial(int x) shall return the x! 
-int factorial(int x) {
-    int fact = 1;
-    for (int i = 1; i <= x; i++) {
-        fact *= i;
-    }
-    return fact;
-}
+// test max
 
-// - The gcd(int a, int b) shall return the greatest common divisor of two numbers
-int gcd(int a, int b) {
-    int i = 1;
-    int gcd;
-    while(i <= a && i <= b)
-    {
-        // verifica se i é um fator de ambos os números
-        if(a%i==0 && b%i==0)
-            gcd = i;
-        i++;
-    }
-    return gcd;
-}
+    // int arr[] = {1, 2, 3, 90, 5};
+    // int size = sizeof(arr) / sizeof(arr[0]);
+    // assert(max(arr, size) == 90);    // ok
+    // assert(max(arr, size) == 1);     // error
 
+// test factorial
 
-bool isPrime(int n){
-    if(n <=1) return false;
-    for(int i = 2; i*i <= n;++i){
-        if(n%i==0) return false;
-    } return true;
-}
-// - Retorne os x números primos: NumerosPrimos(int x)
-int* firstPrimes(int n){
-    int count = 0;
-    int num = 2;
-    int* primes = new int[n];
-    while(count<n){
-        if(isPrime(num)){
-            primes[count] = num;
-            count++;
-        }
-        ++num;
-    }
-    return primes;
-}
+    // assert(factorial(5) == 120); // ok
+    // assert(factorial(6) == 720); // ok
+    // assert(factorial(7) == 5040); // ok
+    // assert(factorial(5) == 121); // error
 
+// test gcd
 
-    // 8 {2, 3 ,5, 7}
+    // assert(gcd(10, 5) == 5); // ok
+    // assert(gcd(10, 6) == 2); // ok
+    // assert(gcd(10, 7) == 1); // ok
+    // assert(gcd(10, 5) == 6); // error
 
+// test firstPrimes
 
-int main() {
-    firstPrimes(4);
+    // int *primes = firstPrimes(5);
+    // assert(primes[0] == 2); // ok
+    // assert(primes[1] == 3); // ok
+    // assert(primes[2] == 5); // ok
+    // assert(primes[3] == 7); // ok
+    // assert(primes[4] == 11); // ok
+    // assert(primes[0] == 3); // error
 
     return 0;
 }

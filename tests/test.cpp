@@ -11,28 +11,16 @@
 FatoracaoNumerosPrimos(int x)*/
 
 // — Given a vector of numbers, return the largest number: max(int[] v)
-int max(int v[]) {
-    int max = v[0];
-    int size = sizeof(v) / sizeof(v[0]); // https://stackoverflow.com/questions/33523585/how-do-sizeofarr-sizeofarr0-work
-    for (int i = 1; i < size; i++) {
-        if (v[i] > max) {
-            max = v[i];
-        }
-    }
-    return max;
+#include <iostream>
+using namespace std;
+int main() {
+    int *a, b;
+    a=&b;
+    cout<<(*a==b);
+    cout<<(a==&b);
+    cout<<("rodou");
+    return 0;
 }
 
 // - The factorial(int x) shall return the x! 
-int factorial(int x) {
-    int fact = 1;
-    for (int i = 1; i <= x; i++) {
-        fact *= i;
-    }
-    return fact;
-}
-
-// - The gcd(int a, int b) shall return the greatest common divisor of two numbers
-int gcd(int a, int b) {
-
-}
 
