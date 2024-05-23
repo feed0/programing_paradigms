@@ -1,4 +1,4 @@
-// - The gcd(int a, int b) shall return the greatest common divisor of two numbers
+// 3 - The gcd(int a, int b) shall return the greatest common divisor of two numbers
 int gcd(int a, int b)
 {
     int i = 1;

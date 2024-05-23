@@ -1,4 +1,4 @@
-// Given a vector of numbers, return the largest number: max(int[] v)
+// 1 - Given a vector of numbers, return the largest number: max(int[] v)
 int max(int *v, int size)
 {
 

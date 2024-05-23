@@ -1,4 +1,4 @@
-// - The factorial(int x) returns the x!
+// 2 - The factorial(int x) returns the x!
 int factorial(int x)
 {
     int fact = 1;

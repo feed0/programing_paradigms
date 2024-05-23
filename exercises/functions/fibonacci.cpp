@@ -1,4 +1,4 @@
-// - 5 Present the x numbers of the Fibonacci sequence: Fibonacci(int x)
+// 5 - Present the x numbers of the Fibonacci sequence: Fibonacci(int x)
 int *fibonacci(int x) {
     
     if (x <= 0) return nullptr;

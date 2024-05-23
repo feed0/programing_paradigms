@@ -1,4 +1,4 @@
-// 4 Return the x prime numbers: Prime Numbers(int x)
+// 4 - Return the x prime numbers: Prime Numbers(int x)
 bool isPrime(int n)
 {
     if (n <= 1)
@@ -11,7 +11,7 @@ bool isPrime(int n)
     return true;
 }
 
-int *firstPrimes(int n)
+int *primes(int n)
 {
     int count = 0;
     int num = 2;

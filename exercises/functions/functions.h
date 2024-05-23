@@ -1,0 +1,5 @@
+#include "max.cpp"
+#include "factorial.cpp"
+#include "gcd.cpp"
+#include "primes.cpp"
+#include "fibonacci.cpp"
