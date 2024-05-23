@@ -3,3 +3,4 @@
 #include "gcd.cpp"
 #include "primes.cpp"
 #include "fibonacci.cpp"
+#include "binToDec.cpp"

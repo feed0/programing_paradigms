@@ -10,9 +10,9 @@
     - 2 The factorial(int x) shall return the x!
     - 3 The gcd(int a, int b) shall return the greatest common divisor of two numbers
     — 4 Return the x prime numbers: Prime Numbers(int x)
-    - 5 Present the x numbers of the Fibonacci sequence: Fibonacci(int x)
+    - 5 Present the x numbers of the Fibonacci sequence: fibonacci(int x)
+    - 6 Convert a given binary number to decimal: binToDec(int x)
 
-    — 6 Converta um dado número binário para decimal: BinToDec(int x)
     - 7 Converta um dado número decimal para binário: DecToBin(int x)
     - 8 Dado um número x faça a decomposição em um produto de fatores primos: FatoracaoNumerosPrimos(int x)
 */
@@ -67,6 +67,12 @@ int main()
     // assert(fib[3] == 2); // ok
     // assert(fib[4] == 3); // ok
     // assert(fib[0] == 1); // error
+
+    // TEST binToDec
+
+    // assert(binToDec(1010) == 10); // ok
+    // assert(binToDec(1011) == 11); // ok
+    // assert(binToDec(1010) == 11); // error
 
     return 0;
 }
