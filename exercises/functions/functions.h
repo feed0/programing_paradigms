@@ -4,3 +4,4 @@
 #include "primes.cpp"
 #include "fibonacci.cpp"
 #include "binToDec.cpp"
+#include "decToBin.cpp"

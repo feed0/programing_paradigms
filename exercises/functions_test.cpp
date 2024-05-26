@@ -12,8 +12,8 @@
     — 4 Return the x prime numbers: Prime Numbers(int x)
     - 5 Present the x numbers of the Fibonacci sequence: fibonacci(int x)
     - 6 Convert a given binary number to decimal: binToDec(int x)
+    - 7 Convert a given decimal number to binary: decToBin(int x)
 
-    - 7 Converta um dado número decimal para binário: DecToBin(int x)
     - 8 Dado um número x faça a decomposição em um produto de fatores primos: FatoracaoNumerosPrimos(int x)
 */
 
@@ -73,6 +73,11 @@ int main()
     // assert(binToDec(1010) == 10); // ok
     // assert(binToDec(1011) == 11); // ok
     // assert(binToDec(1010) == 11); // error
+
+    // TEST decToBin
+    // assert(decToBin(10) == 1010); // ok
+    // assert(decToBin(11) == 1011); // ok
+    // assert(decToBin(10) == 1011); // error
 
     return 0;
 }
