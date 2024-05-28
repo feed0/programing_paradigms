@@ -13,8 +13,7 @@
     - 5 Present the x numbers of the Fibonacci sequence: fibonacci(int x)
     - 6 Convert a given binary number to decimal: binToDec(int x)
     - 7 Convert a given decimal number to binary: decToBin(int x)
-
-    - 8 Dado um número x faça a decomposição em um produto de fatores primos: FatoracaoNumerosPrimos(int x)
+    - 8 Given a number x, perform the decomposition into of prime factors: primeFactors(int x)
 */
 
 #include <assert.h>
@@ -78,6 +77,10 @@ int main()
     // assert(decToBin(10) == 1010); // ok
     // assert(decToBin(11) == 1011); // ok
     // assert(decToBin(10) == 1011); // error
+
+    // TEST primeFactors
+    primeFactors(10); cout << endl; // 2, 5
+    primeFactors(15); cout << endl; // 3, 5
 
     return 0;
 }

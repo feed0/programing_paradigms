@@ -5,3 +5,4 @@
 #include "fibonacci.cpp"
 #include "binToDec.cpp"
 #include "decToBin.cpp"
+#include "primeFactors.cpp"
