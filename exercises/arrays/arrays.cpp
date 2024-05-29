@@ -3,7 +3,7 @@
 #include <algorithm>
 
 using namespace std;
-
+const int m = 10;
 string reverso(string a) {
     int tamanho = a.length();
     char string_reversa[tamanho];
@@ -46,20 +46,66 @@ string concatenaStrings(string s1, string s2) {
     
     }return true;
 }
-    int[][] matrizTransposta(int[][] matriz) {
-
+void transposeMatriz(int rows, int cols, int a[m][m], int result[m][m]) {
+    for (int i = 0; i <= rows; ++i) {
+        for (int j = 0; j <= cols; ++j) {
+            result[j][i] = a[i][j];
+        }
+    }
+}
+bool isIdentity(int a[m][m], int rows, int cols) {
+    if (rows != cols) {
+        return false;
+    }
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            if (i == j && a[i][j] != 1) {
+                return false; 
+            } else if (i != j && a[i][j] != 0) {
+                return false;
+            }
+        }
     }
 
+    return true;
+}
+int somaDiagonaisPrimariaeSecundaria(int a[3][3], int size) {
+    int s1 = 0, s2 = 0;
+    for (int i = 0; i < size; i++) {
+        s1 += a[i][i];
+        s2 += a[i][size - 1 - i];
+    }
 
+    return s1 + s2;
+}
 int main() {
     string s1 = "abc";
     string s2 = "bca";
     string s3 = "aaaaanaaaaa";
+    int rows = 2;
+    int cols = 3;
+    int matriz1[m][m] = {{1, 2}, {4, 6}, {8, 9}};
+    int transposedMatriz[m][m];
+    transposeMatriz(rows, cols, matriz1, transposedMatriz);
+    int matriz2[m][m] = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}};
+    int matriz3[3][3] = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}};
+    cout << "Soma das diagonais: " << somaDiagonaisPrimariaeSecundaria(matriz3, 3) << endl;
+
+   
     cout << "São anagramas? " << saoAnagramas(s1, s2) << endl;
     cout << "Reverso de s1: " << reverso(s1) << endl;
     cout << "Cópia de s1: " << s1 << endl;
     cout << "Concatenação de s1 e s2: " << concatenaStrings(s1, s2) << endl;
     cout << "É palíndromo? " << isPalindromo(s3) << endl;
+     for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            cout << transposedMatriz[i][j] << " ";
+        }
+        cout << endl;
+    }
+    cout << "É identidade? " << isIdentity(matriz2, 3, 3) << endl;
+    cout << "Soma das diagonais: " << somaDiagonaisPrimariaeSecundaria(matriz3, 3) << endl;
+    
     return 0;
 }
 
