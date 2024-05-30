@@ -1,19 +1,13 @@
 /*
     FUNCTIONS EXERCISES
-
-    BY:
-        Felipe Campelo,
-        Taissa Aleves,
-        Vinicius Lima.
-
-    — 1 Given a vector of numbers, return the largest number: max(int[] v)
-    - 2 The factorial(int x) shall return the x!
-    - 3 The gcd(int a, int b) shall return the greatest common divisor of two numbers
-    — 4 Return the x prime numbers: Prime Numbers(int x)
-    - 5 Present the x numbers of the Fibonacci sequence: fibonacci(int x)
-    - 6 Convert a given binary number to decimal: binToDec(int x)
-    - 7 Convert a given decimal number to binary: decToBin(int x)
-    - 8 Given a number x, perform the decomposition into of prime factors: primeFactors(int x)
+    1 — Given a vector of numbers, return the largest number: max(int[] v)
+    2 - The factorial(int x) shall return the x!
+    3 - The gcd(int a, int b) shall return the greatest common divisor of two numbers
+    4 — Return the x prime numbers: Prime Numbers(int x)
+    5 - Present the x numbers of the Fibonacci sequence: fibonacci(int x)
+    6 - Convert a given binary number to decimal: binToDec(int x)
+    7 - Convert a given decimal number to binary: decToBin(int x)
+    8 - Given a number x, perform the decomposition into of prime factors: primeFactors(int x)
 */
 
 #include <assert.h>
