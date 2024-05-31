@@ -1,4 +1,4 @@
-#include "triangle.h" // call T.header
+#include "Triangle.h" // call T.header
 #include <iostream>   // IO based on streams
 #include <stdio.h>    // default header
 
@@ -9,7 +9,8 @@ float *inputSides();
 void printTriangle(Triangle *t);
 Triangle *tris; // allocates memory
 
-int main() {
+int main()
+{
 
   // Alternative 1
   tris = new Triangle(); // first constructor
@@ -30,7 +31,8 @@ int main() {
  * Input via keyboard
  * @return float*
  */
-float *inputSides() {
+float *inputSides()
+{
 
   float *sides = new float[3];
 
@@ -53,9 +55,11 @@ float *inputSides() {
  * Print the triangle data
  * @param Triangle* t
  */
-void printTriangle(Triangle *t) {
+void printTriangle(Triangle *t)
+{
 
-  if (t == NULL) {
+  if (t == NULL)
+  {
     cout << "ERROR: Triangle is NULL" << endl;
     return;
   }
@@ -71,5 +75,4 @@ void printTriangle(Triangle *t) {
   cout << "_____________" << endl;
 
   cout << endl;
-
- }
+}
