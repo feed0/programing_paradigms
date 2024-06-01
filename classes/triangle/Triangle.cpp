@@ -1,25 +1,43 @@
-#include "triangle.h"
+#include "Triangle.h"
 #include <math.h>
 
-Triangle::Triangle() {
+Triangle::Triangle()
+{
   side1 = 3.0;
   side2 = 4.0;
   side3 = 5.0;
 }
-Triangle::Triangle(float side1, float side2, float side3) {
+
+Triangle::Triangle(float side1, float side2, float side3)
+{
   this->side1 = side1;
   this->side2 = side2;
   this->side3 = side3;
 }
-Triangle::~Triangle() {
+
+Triangle::~Triangle()
+{
   // destructed
 }
 
 // methods
-float Triangle::perimeter() { return side1 + side2 + side3; }
-float Triangle::area() {
+float Triangle::area()
+{
   float sp = (side1 + side2 + side3) / 2;
   return sqrt(sp * (sp - side1) * (sp - side2) * (sp - side3));
+}
+
+float Triangle::perimeter()
+{
+  return side1 + side2 + side3;
+}
+
+float Triangle::isTriangle()
+{
+  if (side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1)
+    return true;
+  else
+    return false;
 }
 
 // getter

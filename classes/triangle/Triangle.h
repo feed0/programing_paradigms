@@ -1,22 +1,24 @@
-#ifndef TRIANGLE_H_INCLUDED // conditional compilation directives.
-#define TRIANGLE_H_INCLUDED // Prevents header archives from being added various
-                            // times.
+#ifndef TRIANGLE_H // conditional compilation directives.
+#define TRIANGLE_H // Prevents header archives from being added various times.
 
-class Triangle {
-private:
+class Triangle
+{
+protected:
   float side1;
   float side2;
   float side3;
   static int quantity;
 
 public:
+  // constructor
   Triangle();
   Triangle(float, float, float);
   ~Triangle();
 
   // methods
-  float perimeter();
   float area();
+  float perimeter();
+  float isTriangle();
 
   // getter
   float getSide1();
