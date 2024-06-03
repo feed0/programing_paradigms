@@ -1,4 +1,4 @@
 #include "strcpy.cpp"
-// #include
-// #include
-// #include
+#include "strcmp.cpp"
+#include "strcat.cpp"
+#include "strlen.cpp"
